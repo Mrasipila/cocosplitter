@@ -4,6 +4,19 @@ No external module is neaded, only python.
 
 The data is shuffled before splitting, it creates valid annotation file with 'images', 'categories', 'annotations' and 'info' keys if it exist.
 
+## How it's splitted
+
+The file organisation will be as follows :
+
+```
+data/
+  ├── traindir/
+  ├── testdir/
+  └── annotations/
+  	├── train.json
+  	└── test.json
+```
+
 ## How it works
 
 ```
@@ -30,19 +43,6 @@ both annotation file will be placed under the directory name `annotations`, file
 
 ``` 
 python cocosplitter.py --annotation-file result.json --destination-dirtrain traindir --destination-dirtest testdir --split 0.9
-```
-
-## Data
-
-The file organisation will be as follows :
-
-```
-data/
-  ├── traindir/
-  ├── testdir/
-  └── annotations/
-  	├── train.json
-  	└── test.json
 ```
 
 Useful in the task of object detection when you want to follow the file organisation of https://github.com/Sense-X/Co-DETR/blob/main/README.md
