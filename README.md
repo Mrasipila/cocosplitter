@@ -1,4 +1,7 @@
-Simple tool to split coco annotations file and images file into the two sets of training and validation. No external module is neaded, only python.
+Simple tool to split coco annotations file and images file into the two sets of training and validation. 
+
+No external module is neaded, only python.
+
 The data is shuffled before splitting, it creates valid annotation file with 'images', 'categories', 'annotations' and 'info' keys if it exist.
 
 ## How it works
