@@ -25,7 +25,9 @@ both annotation file will be placed under the directory name `annotations`, file
 
 # Example running 
 
-``` python cocosplitter.py --annotation-file result.json --destination-dirtrain traindir --destination-dirtest testdir --split 0.9 ```
+``` 
+python cocosplitter.py --annotation-file result.json --destination-dirtrain traindir --destination-dirtest testdir --split 0.9
+```
 
 # Data
 
