@@ -1,7 +1,7 @@
 Simple tool to split coco annotations file and images file into the two sets of training and validation. No external module is neaded, only python.
 The data is shuffled before splitting, it creates valid annotation file with 'images', 'categories', 'annotations' and 'info' keys if it exist.
 
-# How it works
+## How it works
 
 ```
 > python cocosplitter.py -h
@@ -23,13 +23,13 @@ optional arguments:
 
 both annotation file will be placed under the directory name `annotations`, file will be named `train.json` and  `test.json`, it is your wish to rename them or relocate them later on. 
 
-# Example running 
+## Example running 
 
 ``` 
 python cocosplitter.py --annotation-file result.json --destination-dirtrain traindir --destination-dirtest testdir --split 0.9
 ```
 
-# Data
+## Data
 
 The file organisation will be as follows :
 
