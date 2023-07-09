@@ -45,10 +45,10 @@ def main(args):
         result_test = {'images':test_images, 'categories':categories, 'annnotations':test_annotations}
     
     os.mkdir('annotations')
-    with open('annotations/train.json','w') as f:
+    with open('annotations/instances_train.json','w') as f:
         json.dump(result_test,f,indent=4)
     
-    with open('annotations/test.json','w') as f:
+    with open('annotations/instances_test.json','w') as f:
         json.dump(result_test,f,indent=4)
     
     # for images files
