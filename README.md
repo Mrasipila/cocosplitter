@@ -45,4 +45,4 @@ both annotation file will be placed under the directory name `annotations`, file
 python cocosplitter.py --annotation-file result.json --destination-dirtrain traindir --destination-dirtest testdir --split 0.9
 ```
 
-Useful in the task of object detection when you want to follow the file organisation of https://github.com/Sense-X/Co-DETR/blob/main/README.md
+Useful in the task of object detection when you want to follow the file organisation of https://github.com/Sense-X/Co-DETR/blob/main/README.md or https://github.com/facebookresearch/detr/blob/master/README.md
