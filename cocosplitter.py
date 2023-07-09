@@ -33,6 +33,22 @@ def main(args):
     # for annotations files
     train_images = [images[i] for i in train_indexes]
     test_images = [images[i] for i in test_indexes]
+    
+    tr_images = []
+    for elem in train_images:
+        if 'image' in elem['file_name']:
+            elem['file_name'] = elem['file_name'][7:]
+            tr_images.append(elem)
+        else :
+            tr_images.append(elem)
+            
+    te_images = []
+    for elem in test_images:
+        if 'image' in elem['file_name']:
+            elem['file_name'] = elem['file_name'][7:]
+            te_images.append(elem)
+        else :
+            te_images.append(elem)
 
     train_annotations = [annot for i in train_indexes for annot in annotations if annot['image_id'] == i]
     test_annotations = [annot for i in test_indexes for annot in annotations if annot['image_id'] == i]
