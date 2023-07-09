@@ -13,8 +13,8 @@ data/
   ├── traindir/
   ├── testdir/
   └── annotations/
-  	├── train.json
-  	└── test.json
+  	├── instances_train.json
+  	└── instances_test.json
 ```
 
 ## How it works
@@ -37,7 +37,7 @@ optional arguments:
   --split SPLIT         Percentage of data that will be put in the train set, a float between [0;1]
 ```
 
-both annotation file will be placed under the directory name `annotations`, file will be named `train.json` and  `test.json`, it is your wish to rename them or relocate them later on. 
+both annotation file will be placed under the directory name `annotations`, file will be named `instances_train.json` and  `instances_test.json`, it is your wish to rename them or relocate them later on. 
 
 ## Example running 
 
