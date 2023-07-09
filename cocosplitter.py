@@ -36,23 +36,25 @@ def main(args):
     
     tr_images = []
     for elem in train_images:
-        elem['file_name'] = elem['file_name'][7:]
-        tr_images.append(elem)
+        e = elem.copy()
+        e['file_name'] = e['file_name'][7:]
+        tr_images.append(e)
             
     te_images = []
     for elem in test_images:
-        elem['file_name'] = elem['file_name'][7:]
-        te_images.append(elem)
+        e = elem.copy()
+        e['file_name'] = e['file_name'][7:]
+        te_images.append(e)
 
     train_annotations = [annot for i in train_indexes for annot in annotations if annot['image_id'] == i]
     test_annotations = [annot for i in test_indexes for annot in annotations if annot['image_id'] == i]
     
     if infos : 
-        result_train = {'images':train_images, 'categories':categories, 'annnotations':train_annotations, 'info':infos}
-        result_test = {'images':test_images, 'categories':categories, 'annnotations':test_annotations, 'info':infos}
+        result_train = {'images':tr_images, 'categories':categories, 'annnotations':train_annotations, 'info':infos}
+        result_test = {'images':te_images, 'categories':categories, 'annnotations':test_annotations, 'info':infos}
     else :
-        result_train = {'images':train_images, 'categories':categories, 'annnotations':train_annotations}
-        result_test = {'images':test_images, 'categories':categories, 'annnotations':test_annotations}
+        result_train = {'images':tr_images, 'categories':categories, 'annnotations':train_annotations}
+        result_test = {'images':te_images, 'categories':categories, 'annnotations':test_annotations}
     
     os.mkdir('annotations')
     with open('annotations/instances_train.json','w') as f:
