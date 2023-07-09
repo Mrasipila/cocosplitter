@@ -56,7 +56,7 @@ def main(args):
     
     os.mkdir('annotations')
     with open('annotations/instances_train.json','w') as f:
-        json.dump(result_test,f,indent=4)
+        json.dump(result_train,f,indent=4)
     
     with open('annotations/instances_test.json','w') as f:
         json.dump(result_test,f,indent=4)
